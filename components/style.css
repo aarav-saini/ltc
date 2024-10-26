@@ -1,0 +1,260 @@
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+
+.t {
+    font-size: calc(28px + 8vw);
+}
+
+.st {
+    font-size: calc(12px + 1.5vw);
+}
+
+a {
+    color: #149414;
+    text-decoration: none;
+}
+
+a.button {
+    padding: 15px;
+    border: #149414 1px solid;
+}
+
+.hero {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+}
+
+.section {
+    min-height: 10vh;
+    padding: 5vw 0px 5vw 0px;
+}
+
+.rowdies {
+    font-family: "Rowdies", sans-serif !important;
+}
+
+.outbutton-container {
+    display: flex;
+    gap: 20px; /* Adjusts the spacing between the buttons */
+    margin-top: 20px; /* Adds some margin from the text above */
+}
+
+.outbutton {
+    display: inline-block; /* Keeps each button block inline */
+}
+
+.corner-button:before,
+.corner-button span:before,
+.corner-button:after,
+.corner-button span:after {
+    display: block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.corner-button {
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+    position: relative;
+    min-width: 100px;
+    min-height: 10px;
+    margin: 20px;
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: #149414;
+    border-radius: 10px;
+    padding: 12px 20px;
+    box-sizing: content-box;
+    border: 2px solid transparent;
+    text-align: center;
+    line-height: 30px;
+    transition: 0.75s ease;
+}
+.corner-button:before {
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid #149414;
+    border-top-left-radius: 8px;
+    border-left: 2px solid #149414;
+    transition: 0.75s all;
+}
+.corner-button:after {
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid #149414;
+    border-top-right-radius: 8px;
+    border-right: 2px solid #149414;
+    transition: 0.75s all;
+}
+.corner-button span {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+.corner-button span:before {
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 2px solid #149414;
+    border-bottom-left-radius: 8px;
+    border-left: 2px solid #149414;
+    transition: 0.75s all;
+}
+.corner-button span:after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid #149414;
+    border-bottom-right-radius: 8px;
+    border-right: 2px solid #149414;
+    transition: 0.75s all;
+}
+.corner-button:hover {
+    color: #ffffff;
+    border-radius: 10px;
+}
+.corner-button:hover:before,
+.corner-button:hover:after {
+    border-color: #149414;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.corner-button:hover span:before,
+.corner-button:hover span:after {
+    border-color: #149414;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.corner-button:hover span::before,
+.corner-button:hover span::after {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.pcTransition {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%; /* Make sure it covers the entire width */
+    transition: height 1s ease-in-out; /* Transition for smooth expansion */
+    z-index: 9999; /* Keep it on top of other elements */
+    background-color: #003d00;
+    opacity: 1;
+    background: linear-gradient(135deg, #14941455 25%, transparent 25%) -10px 0/
+            20px 20px,
+        linear-gradient(225deg, #149414 25%, transparent 25%) -10px 0/ 20px 20px,
+        linear-gradient(315deg, #14941455 25%, transparent 25%) 0px 0/ 20px 20px,
+        linear-gradient(45deg, #149414 25%, #003d00 25%) 0px 0/ 20px 20px;
+}
+
+.content-container {
+    color: white;
+    width: calc(80% + 20px);
+    margin: 20px auto;
+    background-color: black;
+    border: 2px solid #003d00;
+    max-height: 400px;
+    overflow-y: scroll; /* Allows scrolling if content overflows */
+    overflow-x: hidden;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.content-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.content-container::-webkit-scrollbar-track {
+    background: #149414;
+    border-radius: 0px 15px 0px 0px;
+}
+
+/* Handle */
+.content-container::-webkit-scrollbar-thumb {
+    background: #003d00;
+    border-radius: 0px 15px 0px 0px;
+}
+
+/* Handle on hover */
+.content-container::-webkit-scrollbar-thumb:hover {
+    background: #066206;
+}
+
+/* Style for the search bar */
+.search-bar {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #003d00;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for the individual items inside the container */
+.content-item {
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #003d00;
+    border-radius: 15px;
+}
+
+.comshowbutton {
+    padding: 5px;
+    border: 2px solid #003d00;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    margin-top: 5px;
+}
+
+#alertContainer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.alertBox {
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 4s ease-out, transform 4s ease-out;
+}
+
+.alertBox.fadeOut {
+    opacity: 0;
+    transform: translateY(-20px);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Learn to code - Components.</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/lenis@1.1.14/dist/lenis.css" />
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap");
+        </style>
+    </head>
+
+    <body>
+        <div class="pcTransition"></div>
+        <div class="hero">
+            <div class="heroInner">
+                <h1 class="t" style="color: #149414; font-size: 4vw">
+                    aaravsaini@github~$ components
+                </h1>
+                <h1 class="st" style="color: #149414">
+                    > a place to get premade CSS and JS scripts for your website
+                </h1>
+                <h1 class="st" style="color: #149414; font-size: 1.5vw">
+                    > (not all of these are not mine. i provide credit wherever
+                    i can)
+                </h1>
+                <div class="outbutton-container">
+                    <div class="outbutton">
+                        <button class="corner-button" onclick="goTo('/')">
+                            <span>HOME</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section">
+                <div class="content-container">
+                    <!-- Search bar at the top of the container -->
+                    <input
+                        type="text"
+                        id="searchBar"
+                        class="search-bar"
+                        onkeyup="searchItems()"
+                        placeholder="Search.." />
+
+                    <!-- Lots of items in the div -->
+                    <div class="content-item">
+                        <span
+                            style="
+                                font-size: calc(16px + 1vw);
+                                font-family: rowdies;
+                            "
+                            >Pacman Separator</span
+                        ><br />Add the <code>pacman</code> class to any divider
+                        or div, and it'll be converted into a Pacman separator!
+                        <br />
+                        <button
+                            class="comshowbutton"
+                            onclick="goTo('cssComponents/pacmandivider.css')">
+                            Open script
+                        </button>
+                        <button
+                            class="comshowbutton"
+                            onclick="copyScript('css', 'https://aaravsaini.github.io/ltc/components/cssComponents/pacmandivider.css')">
+                            Copy
+                        </button>
+                    </div>
+                    <div class="content-item">
+                        <span
+                            style="
+                                font-size: calc(16px + 1vw);
+                                font-family: rowdies;
+                            "
+                            >Pointer particles</span
+                        ><br />A great hero effect, just put the element
+                        <code>&lt;pointer-particles&gt;</code> to use it!
+                        <br />
+                        <button
+                            class="comshowbutton"
+                            onclick="goTo('jsComponents/pointerparticles.js')">
+                            Open script
+                        </button>
+                        <button
+                            class="comshowbutton"
+                            onclick="copyScript('js', 'https://aaravsaini.github.io/ltc/components/jsComponents/pointerparticles.js')">
+                            Copy
+                        </button>
+                    </div>
+                    <!-- Add as many items as you want -->
+                </div>
+            </div>
+            <div id="alertContainer"></div>
+        </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
