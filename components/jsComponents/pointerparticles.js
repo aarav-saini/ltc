@@ -1,3 +1,5 @@
+// BY RYAN MULLIGAN (https://codepen.io/hexagoncircle/pen/vYwKNzR)
+
 class PointerParticle {
     constructor(spread, speed, component) {
       const { ctx, pointer, hue } = component;
